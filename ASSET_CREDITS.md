@@ -10,6 +10,9 @@ pozyskania i modyfikacje. Uzupełniać przy każdym dodaniu zasobu.
 | `public/images/plane/plane.jpg` | Hero / Samolot | dostarczone przez właściciela | do potwierdzenia | przycięte przez CSS (object-fit), brak modyfikacji pliku | do potwierdzenia |
 | `public/images/pilot/pilot.jpg` | Pilot | dostarczone przez właściciela | do potwierdzenia | przycięte przez CSS, brak modyfikacji pliku | do potwierdzenia |
 | `public/images/scene/scene.png` | (zapasowe tło oceanu) | dostarczone przez właściciela | do potwierdzenia | obecnie nieużywane na stronie | do potwierdzenia |
+| `public/images/pilot/pilot_bio.jpeg` | Biografie (Krzysztof) | dostarczone przez właściciela | do potwierdzenia | przycięte przez CSS, brak modyfikacji pliku | do potwierdzenia |
+| `public/images/scene/lot_1–4.mp4` | Filmy | dostarczone przez właściciela | do potwierdzenia | brak modyfikacji | do potwierdzenia |
+| `public/images/lindbergh/lindbergh.jpg` | Biografie (Lindbergh) | do dostarczenia | do potwierdzenia — preferowana domena publiczna | brak | do potwierdzenia |
 
 ## Treści generowane w kodzie
 

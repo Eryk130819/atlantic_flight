@@ -15,9 +15,13 @@ fully bilingual PL/EN via hash routing (`#/pl`, `#/en`, default EN).
 
 - `src/i18n.js` — all copy in PL/EN dictionaries + media links/images +
   `LanguageProvider` / `useLang()`. This is the single place to edit text.
-- `src/components/` — one component per section (Header, Hero, History,
-  Route, Aircraft, Pilot, Preparations, Partners, Patronite, Media, Final,
-  Footer) + `Map.jsx` (SVG North-Atlantic route map) + `useReveal.js` hook.
+- `src/components/` — one component per section (Header, Hero, Countdown,
+  TrustStrip, History, Biographies, Aircraft, Route, Preparations, Videos,
+  Partners, Patronite, Media, Final, Footer) + `SideNav.jsx` (left section
+  legend, desktop ≥1700px) + `Map.jsx` (SVG North-Atlantic route map) +
+  `CountdownBadge.jsx` (fixed badge under the header; moves to the corner when
+  the header hides) + `VideoModal.jsx` + `useReveal.js` / `useCountdown.js` /
+  `useHeaderScroll.js` hooks.
 - `src/App.jsx` — section order. `src/main.jsx` wraps app in `LanguageProvider`.
 
 ## Commands
@@ -40,8 +44,9 @@ npm run preview # preview the production build
 ## Notes
 
 - `src/content.js`, `src/hooks/useScrollProgress.js` and
-  `src/components/{Airplane,StatueOfLiberty,Skyline,About,Contact,Journey,
+  `src/components/{Airplane,Pilot,StatueOfLiberty,Skyline,About,Contact,Journey,
   JourneyMap,PlaceholderImage,PlaneDetails}.jsx` are leftovers from earlier
-  iterations, no longer imported — delete them when convenient.
+  iterations, no longer imported — delete them when convenient. (`Pilot` was
+  superseded by `Biographies`.)
 - Map coastlines in `Map.jsx` are hand-approximated; replace with Natural
   Earth data when available (see CONTENT_TODO.md).

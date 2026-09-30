@@ -1,17 +1,11 @@
 import { useEffect, useState } from 'react'
 import { useLang } from '../i18n'
+import { useHeaderScroll } from '../hooks/useHeaderScroll'
 
 export default function Header() {
   const { lang, t, setLang } = useLang()
   const [open, setOpen] = useState(false)
-  const [scrolled, setScrolled] = useState(false)
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24)
-    onScroll()
-    window.addEventListener('scroll', onScroll, { passive: true })
-    return () => window.removeEventListener('scroll', onScroll)
-  }, [])
+  const { scrolled, hidden } = useHeaderScroll()
 
   useEffect(() => {
     document.body.style.overflow = open ? 'hidden' : ''
@@ -27,11 +21,19 @@ export default function Header() {
 
   const goTo = (id) => {
     setOpen(false)
+    if (id === 'top') {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+      return
+    }
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
   }
 
   return (
-    <header className={`header${scrolled ? ' is-scrolled' : ''}`}>
+    <header
+      className={`header${scrolled ? ' is-scrolled' : ''}${
+        hidden && !open ? ' is-hidden' : ''
+      }`}
+    >
       <a className="skip-link" href="#main">
         {t.a11y.skip}
       </a>

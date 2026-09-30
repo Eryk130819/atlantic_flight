@@ -1,4 +1,4 @@
-import { useLang } from '../i18n'
+import { media, useLang } from '../i18n'
 
 export default function Partners() {
   const { t } = useLang()
@@ -29,7 +29,12 @@ export default function Partners() {
 
         <div className="partners__cta">
           <p>{t.partners.contactText}</p>
-          <a className="button" href="#final">
+          <a
+            className="button"
+            href={media.links.facebook}
+            target="_blank"
+            rel="noreferrer"
+          >
             {t.partners.cta}
           </a>
           <span className="partners__email-note">{t.partners.emailNote}</span>

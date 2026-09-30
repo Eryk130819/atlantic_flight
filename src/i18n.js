@@ -5,7 +5,18 @@ export const media = {
   images: {
     heroPlane: '/images/plane/plane.jpg',
     pilot: '/images/pilot/pilot.jpg',
+    pilotBio: '/images/pilot/pilot_bio.jpeg',
+    lindbergh: '/images/lindbergh/lindbergh.jpg',
     ocean: '/images/scene/scene.png',
+  },
+  videos: [
+    '/images/scene/lot_1.mp4',
+    '/images/scene/lot_2.mp4',
+    '/images/scene/lot_3.mp4',
+    '/images/scene/lot_4.mp4',
+  ],
+  youtube: {
+    firstSoloFlight: 'HHWV781atgo',
   },
   links: {
     patronite: 'https://patronite.pl/TACZ',
@@ -25,12 +36,14 @@ const en = {
   },
   nav: {
     brand: 'TACZ · ATLANTYK 2027',
+    top: 'Start',
     links: [
       { id: 'expedition', label: 'Expedition' },
-      { id: 'route', label: 'Route' },
+      { id: 'biographies', label: 'Biographies' },
       { id: 'aircraft', label: 'Aircraft' },
-      { id: 'pilot', label: 'Pilot' },
+      { id: 'route', label: 'Route' },
       { id: 'preparations', label: 'Preparations' },
+      { id: 'videos', label: 'Videos' },
       { id: 'partners', label: 'Partners' },
       { id: 'media', label: 'Media' },
     ],
@@ -45,6 +58,18 @@ const en = {
     caption: 'New York → Paris · 2027',
     ctaPrimary: 'Become a partner',
     ctaSecondary: 'Support on Patronite',
+  },
+  countdown: {
+    date: '2027-05-20T11:52:00Z',
+    kicker: 'Countdown',
+    title: 'The expedition takes off in',
+    days: 'days',
+    hours: 'hours',
+    minutes: 'minutes',
+    seconds: 'seconds',
+    caption:
+      'Takeoff: 20 May 2027, 7:52 a.m. New York time — exactly one hundred years after Lindbergh’s departure.',
+    done: 'The expedition has taken off. Follow the story.',
   },
   trust: {
     heading: 'Facts first',
@@ -66,6 +91,31 @@ const en = {
     newText:
       'In 2027 Krzysztof Taczalski plans his own crossing on an aircraft of the same type — his own expedition, paying homage to that flight.',
     clamp: '100 years · New York → Paris · two pilots',
+  },
+  biographies: {
+    kicker: 'Two biographies',
+    title: 'Two aviators, one ocean',
+    intro:
+      'A century separates them, but the challenge is the same: a small aircraft, a great ocean and a lone decision to go.',
+    charles: {
+      name: 'Charles A. Lindbergh',
+      meta: '1902–1974 · aviator · engineer · author',
+      caption: 'Charles A. Lindbergh',
+      bio: [
+        'Charles Augustus Lindbergh was born in 1902 in Detroit. He learned to fly in the 1920s as a barnstormer and airmail pilot, and in 1927 he took up the challenge of the Orteig Prize: a non-stop flight between New York and Paris.',
+        'On 20 May 1927, at the age of 25, he took off from Roosevelt Field in the Spirit of St. Louis (Ryan NYP) — an aircraft so heavily loaded with fuel that it barely cleared the treeline. After 33.5 hours alone over the ocean, fighting sleep and ice, he landed at Le Bourget near Paris. It was the first solo non-stop transatlantic flight.',
+        'The flight made him one of the most famous people of the 20th century and opened a new era in aviation. A hundred years later, his route is still the measure of the feat.',
+      ],
+    },
+    krzysztof: {
+      name: 'Krzysztof Taczalski (TACZ)',
+      meta: 'Pilot · stuntman · motorcyclist',
+      caption: 'Krzysztof Taczalski (TACZ)',
+      bio: [
+        'Krzysztof Taczalski — known as TACZ — is a stuntman, motorcycle rider and pilot. He has spent years in the world of motorsport and film work, and is now preparing his first great aviation challenge: a transatlantic crossing in 2027, a century after Lindbergh.',
+        'He approaches the expedition methodically — from training and flight hours, through the selection of an aircraft of the Spirit of St. Louis type, to logistics and funding. He shares the progress of the preparations publicly, including interviews and his Patronite campaign.',
+      ],
+    },
   },
   route: {
     kicker: 'Route',
@@ -99,35 +149,17 @@ const en = {
     ],
     note: 'Full technical specification of the expedition aircraft to be confirmed.',
   },
-  pilot: {
-    kicker: 'Pilot',
-    title: 'The man behind the plan',
-    bio:
-      'Krzysztof Taczalski — TACZ — is a stuntman, motorcycle rider and pilot preparing his first great aviation challenge: a transatlantic crossing in 2027.',
-    factsTitle: 'Three facts',
-    facts: [
-      { title: 'Pilot', text: 'Working toward his own transatlantic flight in 2027.' },
-      { title: 'Stuntman', text: 'A professional motorcycle and stunt performer.' },
-      { title: 'Patronite', text: 'Running an open public funding campaign for the expedition.' },
-    ],
-    quote: null,
-    caption: 'Krzysztof Taczalski (TACZ)',
-  },
   preparations: {
     kicker: 'Preparations',
-    title: 'You can see it happen',
+    title: 'It is already happening',
     intro:
-      'Training, interviews and materials from the preparations — step by step toward the departure.',
+      'The first solo flight is behind him — and the films below show what the preparations look like now.',
     featuredTitle: 'First solo flight',
-    featuredDesc: 'The film from Krzysztof’s first solo flight.',
-    featuredDate: 'Material date to be confirmed',
+    milestoneText: 'The moment every pilot remembers.',
     play: 'Watch the film',
-    timelineTitle: 'Road to departure',
-    timeline: [
-      { title: 'First solo flight', status: 'done' },
-      { title: 'Expedition planning and route', status: 'ongoing' },
-      { title: 'Atlantic crossing 2027', status: 'planned' },
-    ],
+    nowTitle: 'Now: films from the flights',
+    nowText: 'Current footage from training and flights.',
+    nowCta: 'Go to the films',
   },
   partners: {
     kicker: 'Partners',
@@ -148,7 +180,7 @@ const en = {
     ],
     contactText: 'Let’s talk about partnering with the expedition.',
     cta: 'Discuss a partnership',
-    emailNote: 'Direct contact or via the profiles below.',
+    emailNote: 'Contact via the profiles below.',
   },
   patronite: {
     kicker: 'Patronite',
@@ -189,16 +221,19 @@ const en = {
     pressText:
       'A short project description, approved photos and biography are available for publication. Contact the expedition for details and photo credits.',
   },
+  videos: {
+    kicker: 'Videos',
+    title: 'Films from the flights',
+    intro: 'Current footage from Krzysztof’s training and flights.',
+    play: 'Watch film',
+  },
   final: {
     title: 'A century later. Across the Atlantic again.',
     text:
       'Two ways to be part of this story: join the expedition as a partner, or support it through Patronite.',
     ctaPrimary: 'Discuss a partnership',
     ctaSecondary: 'Support on Patronite',
-    emailLabel: 'Email',
-    copy: 'Copy email',
-    copied: 'Copied',
-    emailNote: 'Direct contact',
+    contactNote: 'Partnership enquiries: contact us through the profiles in the footer.',
   },
   footer: {
     brand: 'TACZ · ATLANTYK 2027',
@@ -228,12 +263,14 @@ const pl = {
   },
   nav: {
     brand: 'TACZ · ATLANTYK 2027',
+    top: 'Początek',
     links: [
       { id: 'expedition', label: 'Wyprawa' },
-      { id: 'route', label: 'Trasa' },
+      { id: 'biographies', label: 'Biografie' },
       { id: 'aircraft', label: 'Samolot' },
-      { id: 'pilot', label: 'Pilot' },
+      { id: 'route', label: 'Trasa' },
       { id: 'preparations', label: 'Przygotowania' },
+      { id: 'videos', label: 'Filmy' },
       { id: 'partners', label: 'Partnerzy' },
       { id: 'media', label: 'Media' },
     ],
@@ -248,6 +285,18 @@ const pl = {
     caption: 'Nowy Jork → Paryż · 2027',
     ctaPrimary: 'Zostań partnerem',
     ctaSecondary: 'Wesprzyj na Patronite',
+  },
+  countdown: {
+    date: '2027-05-20T11:52:00Z',
+    kicker: 'Odliczanie',
+    title: 'Wyprawa startuje za',
+    days: 'dni',
+    hours: 'godzin',
+    minutes: 'minut',
+    seconds: 'sekund',
+    caption:
+      'Start: 20 maja 2027, godz. 7:52 czasu Nowego Jorku — dokładnie sto lat po starcie Lindbergha.',
+    done: 'Wyprawa wystartowała. Śledź relację.',
   },
   trust: {
     heading: 'Najpierw fakty',
@@ -269,6 +318,31 @@ const pl = {
     newText:
       'W 2027 roku Krzysztof Taczalski planuje własny przelot samolotem w tym samym typie — własną wyprawę nawiązującą do tamtego lotu.',
     clamp: '100 lat · Nowy Jork → Paryż · dwóch pilotów',
+  },
+  biographies: {
+    kicker: 'Dwie biografie',
+    title: 'Dwóch lotników, jeden ocean',
+    intro:
+      'Dzieli ich sto lat, a wyzwanie jest to samo: mały samolot, wielki ocean i samotna decyzja o starcie.',
+    charles: {
+      name: 'Charles A. Lindbergh',
+      meta: '1902–1974 · pilot · inżynier · autor',
+      caption: 'Charles A. Lindbergh',
+      bio: [
+        'Charles Augustus Lindbergh urodził się w 1902 roku w Detroit. Latać nauczył się w latach dwudziestych, zarabiając jako pilot pokazowy i pocztowy. W 1927 roku podjął wyzwanie Nagrody Orteiga: lot bez międzylądowania między Nowym Jorkiem a Paryżem.',
+        '20 maja 1927 roku, mając 25 lat, wystartował z Roosevelt Field na pokładzie Spirit of St. Louis (Ryan NYP) — maszyny tak zatankowanej, że ledwo przeleciała nad linią drzew. Po 33,5 godziny samotnego lotu, walcząc ze snem i oblodzeniem, wylądował na lotnisku Le Bourget pod Paryżem. Był to pierwszy samotny, nieprzerwany przelot przez Atlantyk.',
+        'Lot uczynił go jedną z najsłynniejszych postaci XX wieku i otworzył nową erę w lotnictwie. Sto lat później jego trasa wciąż jest miarą tego wyczynu.',
+      ],
+    },
+    krzysztof: {
+      name: 'Krzysztof Taczalski (TACZ)',
+      meta: 'Pilot · kaskader · motocyklista',
+      caption: 'Krzysztof Taczalski (TACZ)',
+      bio: [
+        'Krzysztof Taczalski — TACZ — jest kaskaderem, motocyklistą i pilotem. Od lat związany ze światem sportów motocyklowych i pracą na planie filmowym, dziś przygotowuje swoje pierwsze wielkie wyzwanie lotnicze: przelot przez Atlantyk w 2027 roku, sto lat po Lindberghu.',
+        'Do wyprawy podchodzi metodycznie — od szkolenia i nalotu, przez wybór maszyny w typie Spirit of St. Louis, po logistykę i finansowanie. O postępach przygotowań opowiada publicznie, m.in. w wywiadach i w zbiórce na Patronite.',
+      ],
+    },
   },
   route: {
     kicker: 'Trasa',
@@ -302,35 +376,17 @@ const pl = {
     ],
     note: 'Pełna specyfikacja techniczna maszyny wyprawy do potwierdzenia.',
   },
-  pilot: {
-    kicker: 'Pilot',
-    title: 'Człowiek stojący za planem',
-    bio:
-      'Krzysztof Taczalski — TACZ — kaskader, motocyklista i pilot przygotowujący swoje pierwsze wielkie lotnicze wyzwanie: przelot przez Atlantyk w 2027 roku.',
-    factsTitle: 'Trzy fakty',
-    facts: [
-      { title: 'Pilot', text: 'Przygotowuje własny przelot przez Atlantyk w 2027 roku.' },
-      { title: 'Kaskader', text: 'Zawodowo zajmuje się motocyklowymi kaskadrami.' },
-      { title: 'Patronite', text: 'Prowadzi otwartą zbiórkę publiczną na wyprawę.' },
-    ],
-    quote: null,
-    caption: 'Krzysztof Taczalski (TACZ)',
-  },
   preparations: {
     kicker: 'Przygotowania',
-    title: 'Widać, że to się dzieje',
+    title: 'To już się dzieje',
     intro:
-      'Treningi, wywiady i materiały z przygotowań — krok po kroku ku startowi.',
+      'Pierwszy samodzielny lot ma za sobą — a filmy poniżej pokazują, jak przygotowania wyglądają teraz.',
     featuredTitle: 'Pierwszy samodzielny lot',
-    featuredDesc: 'Film z pierwszego samodzielnego lotu Krzysztofa.',
-    featuredDate: 'Data materiału do potwierdzenia',
+    milestoneText: 'Moment, który pamięta każdy pilot.',
     play: 'Obejrzyj film',
-    timelineTitle: 'Droga do startu',
-    timeline: [
-      { title: 'Pierwszy samodzielny lot', status: 'done' },
-      { title: 'Planowanie wyprawy i trasy', status: 'ongoing' },
-      { title: 'Przelot przez Atlantyk 2027', status: 'planned' },
-    ],
+    nowTitle: 'Teraz: filmy z lotów',
+    nowText: 'Bieżące materiały z treningów i lotów.',
+    nowCta: 'Przejdź do filmów',
   },
   partners: {
     kicker: 'Partnerzy',
@@ -351,7 +407,7 @@ const pl = {
     ],
     contactText: 'Porozmawiajmy o partnerstwie z wyprawą.',
     cta: 'Porozmawiajmy o partnerstwie',
-    emailNote: 'Bezpośredni kontakt lub profile poniżej.',
+    emailNote: 'Kontakt przez profile poniżej.',
   },
   patronite: {
     kicker: 'Patronite',
@@ -392,16 +448,19 @@ const pl = {
     pressText:
       'Krótki opis projektu, zatwierdzone zdjęcia i biografia są dostępne do publikacji. O szczegóły i kredyty zdjęciowe kontaktuj się z wyprawą.',
   },
+  videos: {
+    kicker: 'Wideo',
+    title: 'Filmy z lotów',
+    intro: 'Bieżące materiały z treningów i lotów Krzysztofa.',
+    play: 'Obejrzyj film',
+  },
   final: {
     title: 'Sto lat później. Znów przez Atlantyk.',
     text:
       'Dwie drogi, by być częścią tej historii: dołącz do wyprawy jako partner albo wesprzyj ją przez Patronite.',
     ctaPrimary: 'Porozmawiajmy o partnerstwie',
     ctaSecondary: 'Wesprzyj na Patronite',
-    emailLabel: 'E-mail',
-    copy: 'Kopiuj e-mail',
-    copied: 'Skopiowano',
-    emailNote: 'Bezpośredni kontakt',
+    contactNote: 'Zapytania o partnerstwo: kontakt przez profile w stopce.',
   },
   footer: {
     brand: 'TACZ · ATLANTYK 2027',

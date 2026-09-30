@@ -73,15 +73,15 @@ export default function Map() {
       >
         <defs>
           <linearGradient id="map-sea" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stopColor="#dbe6e8" />
-            <stop offset="100%" stopColor="#c9d9dc" />
+            <stop offset="0%" stopColor="#e7eeee" />
+            <stop offset="100%" stopColor="#d3e2e2" />
           </linearGradient>
         </defs>
 
         <rect width="1000" height="660" fill="url(#map-sea)" />
 
         {/* siatka */}
-        <g stroke="rgba(41,37,31,0.08)" strokeWidth="1">
+        <g stroke="rgba(22,41,46,0.07)" strokeWidth="1">
           {[0, 1, 2, 3, 4].map((i) => (
             <line key={`v${i}`} x1={i * 200} y1="0" x2={i * 200} y2="660" />
           ))}
@@ -93,8 +93,8 @@ export default function Map() {
         {/* lądy */}
         <g
           className={`route-map__lands${visible ? ' is-visible' : ''}`}
-          fill="#efe6d8"
-          stroke="#cbbba5"
+          fill="#eef1ef"
+          stroke="#c2cecc"
           strokeWidth="1.5"
         >
           <polygon points={EUROPE} />
@@ -111,15 +111,15 @@ export default function Map() {
           d={routePath}
           className={`route-map__line${visible ? ' is-visible' : ''}`}
           fill="none"
-          stroke="#8b4434"
+          stroke="#0e3b45"
           strokeWidth="2.5"
           strokeDasharray="6 6"
         />
 
         {/* punkty */}
         <g className="route-map__points">
-          <circle cx={ny[0] * 10} cy={ny[1] * 10} r="5" fill="#826037" />
-          <circle cx={paris[0] * 10} cy={paris[1] * 10} r="5" fill="#826037" />
+          <circle cx={ny[0] * 10} cy={ny[1] * 10} r="5" fill="#9a7318" />
+          <circle cx={paris[0] * 10} cy={paris[1] * 10} r="5" fill="#9a7318" />
         </g>
 
         {/* punkt lecący po trasie — jeden raz */}
@@ -127,8 +127,8 @@ export default function Map() {
           <circle
             className="route-map__plane"
             r="5"
-            fill="#8b4434"
-            stroke="#faf6ef"
+            fill="#d9a93a"
+            stroke="#0e3b45"
             strokeWidth="1.5"
           >
             <animateMotion
