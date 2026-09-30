@@ -30,7 +30,7 @@ export const media = {
 const en = {
   lang: 'en',
   meta: {
-    title: 'TACZ · Atlantyk 2027',
+    title: 'TACZ',
     description:
       'A century later, across the Atlantic again. Krzysztof Taczalski’s 2027 transatlantic expedition on a Spirit of St. Louis type aircraft.',
   },
@@ -257,7 +257,7 @@ const en = {
 const pl = {
   lang: 'pl',
   meta: {
-    title: 'TACZ · Atlantyk 2027',
+    title: 'TACZ',
     description:
       'Sto lat później. Znów przez Atlantyk. Wyprawa Krzysztofa Taczalskiego w 2027 roku samolotem w typie Spirit of St. Louis.',
   },
