@@ -13,7 +13,16 @@ export default function Footer() {
         <nav className="footer__nav" aria-label={t.footer.navLabel}>
           <p className="footer__heading">{t.footer.navLabel}</p>
           {t.nav.links.map((link) => (
-            <a key={link.id} href={`#${link.id}`}>
+            <a
+              key={link.id}
+              href={`#${link.id}`}
+              onClick={(event) => {
+                event.preventDefault()
+                document
+                  .getElementById(link.id)
+                  ?.scrollIntoView({ behavior: 'smooth' })
+              }}
+            >
               {link.label}
             </a>
           ))}

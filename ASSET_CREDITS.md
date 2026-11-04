@@ -27,8 +27,9 @@ pozyskania i modyfikacje. Uzupełniać przy każdym dodaniu zasobu.
 ## Materiały zewnętrzne (linki, bez pobierania plików)
 
 - Film „Pierwszy samodzielny lot”: YouTube (link w `src/i18n.js`).
-- Wywiad: Radio Eska (link). Nazwa mediów używana wyłącznie jako opis
-  materiału, nie jako oznaka partnerstwa.
+- Wywiady: TVP3 Lublin i Polskie Radio Lublin (linki YouTube, sekcja Hero),
+  Radio Eska (link). Nazwy mediów używane wyłącznie jako opis materiału,
+  nie jako oznaka partnerstwa.
 
 ## Zadania
 

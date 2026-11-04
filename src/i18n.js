@@ -23,6 +23,8 @@ export const media = {
     facebook: 'https://www.facebook.com/krzysztof.taczalski',
     firstSoloFlight:
       'https://www.youtube.com/watch?feature=shared&v=HHWV781atgo',
+    tvp3: 'https://youtu.be/KVr6FWKOzgw',
+    radioLublin: 'https://youtu.be/zOcO5FHlcFg',
     eska: 'https://krasnik.eska.pl/chce-przeleciec-atlantyk-jak-100-lat-temu-krzysztof-taczalski-zbiera-pieniadze-na-niezwykly-lot-aa-KVYJ-75vs-eKkV.html',
   },
 }
@@ -58,6 +60,22 @@ const en = {
     caption: 'New York → Paris · 2027',
     ctaPrimary: 'Become a partner',
     ctaSecondary: 'Support on Patronite',
+    interviewsTitle: 'Interviews',
+    interviews: [
+      {
+        before: 'And here is the film from my ',
+        link: 'TVP3 Lublin',
+        after: ' interview about the Atlantic crossing.',
+        url: media.links.tvp3,
+      },
+      {
+        before:
+          'And whether you are driving or going to sleep, it is worth listening to this interview on ',
+        link: 'Polish Radio Lublin',
+        after: '!',
+        url: media.links.radioLublin,
+      },
+    ],
   },
   countdown: {
     date: '2027-05-20T11:52:00Z',
@@ -205,6 +223,18 @@ const en = {
         lang: 'PL',
       },
       {
+        medium: 'TVP3 Lublin',
+        title: 'TV interview about the Atlantic crossing',
+        url: media.links.tvp3,
+        lang: 'PL',
+      },
+      {
+        medium: 'Polskie Radio Lublin',
+        title: 'Radio interview about the Atlantic crossing',
+        url: media.links.radioLublin,
+        lang: 'PL',
+      },
+      {
         medium: 'Eska Radio',
         title: 'The Atlantic crossing interview',
         url: media.links.eska,
@@ -285,6 +315,22 @@ const pl = {
     caption: 'Nowy Jork → Paryż · 2027',
     ctaPrimary: 'Zostań partnerem',
     ctaSecondary: 'Wesprzyj na Patronite',
+    interviewsTitle: 'Wywiady',
+    interviews: [
+      {
+        before: 'A oto film z mojego wywiadu w ',
+        link: 'TVP3 Lublin',
+        after: ' odnośnie przelotu nad Atlantykiem.',
+        url: media.links.tvp3,
+      },
+      {
+        before:
+          'A jak jedziecie samochodem lub idziecie spać, to warto tego wywiadu w ',
+        link: 'Polskim Radiu Lublin',
+        after: ' posłuchać!',
+        url: media.links.radioLublin,
+      },
+    ],
   },
   countdown: {
     date: '2027-05-20T11:52:00Z',
@@ -429,6 +475,18 @@ const pl = {
         medium: 'YouTube',
         title: 'Pierwszy samodzielny lot',
         url: media.links.firstSoloFlight,
+        lang: 'PL',
+      },
+      {
+        medium: 'TVP3 Lublin',
+        title: 'Wywiad telewizyjny o przelocie przez Atlantyk',
+        url: media.links.tvp3,
+        lang: 'PL',
+      },
+      {
+        medium: 'Polskie Radio Lublin',
+        title: 'Wywiad radiowy o przelocie przez Atlantyk',
+        url: media.links.radioLublin,
         lang: 'PL',
       },
       {

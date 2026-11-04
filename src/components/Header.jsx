@@ -34,7 +34,16 @@ export default function Header() {
         hidden && !open ? ' is-hidden' : ''
       }`}
     >
-      <a className="skip-link" href="#main">
+      <a
+        className="skip-link"
+        href="#main"
+        onClick={(event) => {
+          event.preventDefault()
+          const main = document.getElementById('main')
+          main?.scrollIntoView()
+          main?.focus()
+        }}
+      >
         {t.a11y.skip}
       </a>
       <div className="header__inner">

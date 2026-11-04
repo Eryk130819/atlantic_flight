@@ -22,7 +22,7 @@ export default function App() {
       <Header />
       <CountdownBadge />
       <SideNav />
-      <main id="main">
+      <main id="main" tabIndex={-1}>
         <Countdown />
         <Hero />
         <TrustStrip />

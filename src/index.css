@@ -529,6 +529,48 @@ a:hover {
   color: var(--ink-soft);
 }
 
+.hero__interviews {
+  margin-top: clamp(28px, 4vw, 48px);
+  padding: clamp(20px, 3vw, 32px);
+  background: var(--deep);
+  border-radius: 4px;
+  box-shadow: 0 14px 40px rgba(14, 59, 69, 0.18);
+}
+
+.hero__interviews .hero__interviews-title {
+  margin: 0 0 10px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.hero__interviews p {
+  max-width: 90ch;
+  margin: 0 0 10px;
+  font-size: clamp(1rem, 1.2vw, 1.1rem);
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.hero__interviews p:last-child {
+  margin-bottom: 0;
+}
+
+.hero__interviews a {
+  font-weight: 700;
+  color: var(--gold);
+  text-decoration-color: rgba(217, 169, 58, 0.55);
+  text-underline-offset: 3px;
+}
+
+.hero__interviews a:hover {
+  color: var(--paper-light);
+}
+
+
+
 /* ===== Countdown ===== */
 
 .countdown {
@@ -914,6 +956,8 @@ a:hover {
   font-style: italic;
   color: var(--ink-soft);
 }
+
+
 
 /* ===== Preparations ===== */
 

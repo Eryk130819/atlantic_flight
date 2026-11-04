@@ -54,4 +54,6 @@ pokazane na stronie jako placeholder/lorem ipsum.
 ## Kontakt / media
 
 - [ ] Eska — potwierdzić tytuł audycji i datę.
+- [ ] TVP3 Lublin i Polskie Radio Lublin — potwierdzić tytuły materiałów
+      i daty emisji (linki są już w Hero).
 - [ ] Ewentualny telefon (z numerem kierunkowym) do publikacji.
